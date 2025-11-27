@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiet Play</title>
+    <link rel="stylesheet" href="styleMenu.css">
+    <link rel="stylesheet" href="styleGamePanel.css">
+    <link rel="stylesheet" href="styleMoviePanel.css">
+    <link rel="stylesheet" href="styleStoryPanel.css">
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+
+    <div id="UpperContainer" class="UpperContainer">
+        <button id="btnOpenMenu" class="btnOpenMenu"> 
+            <img src="resources/iconMenu.png" style="object-fit: cover;">
+        </button>
+    </div>
+    
+    <h1 id="welcome" 
+        style="color: aliceblue;
+               text-align: center;
+               line-height: 100vh;">
+        Welcome To QuietPlay
+    </h1>
+
+    <div id="MenuContainer" class="MenuContainer">
+        <button id="btnCloseMenu" class="btnCloseMenu">
+            <img src="resources/iconMenu.png" style="object-fit: cover;">
+        </button>
+        <button id="btnMovie" class="btnMovie"> MOVIE </button>
+        <button id="btnStory" class="btnStory"> STORIES </button>
+        <button id="btnGame" class="btnGame"> GAMES </button>
+    </div>
+    
+    <div id="MoviePanel" class="MoviePanel">
+        <div id="firstMovie" class="firstMovie">
+            <img src="resources/iconSM.jpg">
+            <button id="btnWatch" class="btnWatch"></button>
+            <h3 style="text-align: center;">Spider-Man Into The Spider-Verse</h3>
+        </div>
+        
+        <div id="moviePlayer" class="moviePlayer" style="display: none;">
+            <div id="subtitle" class="subtitle"> Subtittle/Closed Captions Goes Here </div>
+
+            <div id="controlPanel" class="controlPanel" >
+                <button id="btnBackward" class="btnBackward">
+                    <img src="resources/IconBackward.png" alt="">
+                </button>
+                <button id="btnPlay" class="btnPlay"> 
+                    <img src="resources/IconPlay.png" >
+                </button>
+                <button id="btnForward" class="btnForward">
+                    <img src="resources/IconForward.png" alt="">
+                </button>
+
+                <button id="btnSound" class="btnSound">
+                    <input class="soundTuner" type="range" min="0" max="30">
+                    <img src="resources/IconSound.png" alt="">
+                </button>
+
+                <h5>0:00/0:00</h5>
+                <hr>
+
+                <button id="btnCC" class="btnCC">
+                    <img src="resources/IconCC.png" alt="">
+                </button>
+                <button id="btnSetting" class="btnSetting">
+                    <img src="resources/settings.png" alt="">
+                </button>
+
+                <div id="settingPanel" class="settingPanel">
+                    <label>Font Costumization</label>
+                    <hr style="height: 1px;">
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;Font Style:</label>
+                    <select id="fontStyle">
+                        <option value="Arial">Arial</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Georgia">Georgia</option>
+                    </select>
+                    <br>
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;Font Size: </label> 
+                    <input type="number" id="fontSize" min="10" max="60" value="20" style="width: 40px; right: 10px;">
+                    <br>
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;Font Color: </label> 
+                    <input type="color" id="fontColor" value="$ffffff" style="width: 40px; height: 20px;">
+                    <hr style="height: 1px;">
+                    <label>Sound Costumization</label>
+                    <hr style="height: 1px;">
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;Balance Control: </label> 
+                    <input type="range" min="0" max="30">
+                    <br>
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;Backround Noise: </label>
+                    <input type="range" min="0" max="30">
+                    <br>
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;Speech Enhancement: </label>
+                    <input type="range" min="0" max="30"> 
+                    <br>
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;High Frequency: </label> 
+                    <input type="range" min="0" max="30">
+                    <br>
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;Low Frequency: </label> 
+                    <input type="range" min="0" max="30">
+                    <br>
+                </div>
+
+                <button id="btnFullScreen" class="btnFullScreen" >
+                    <img src="resources/IconFull.png" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="StoryPanel" class="StoryPanel">
+        <div id="firstStory" class="firstStory">
+            <button id="btnRead" class="btnRead"></button>
+            <img src="resources/iconBook.jpg" >
+            <h3 
+                style="text-align: center;
+                        color: aliceblue;">
+                Three Body Problem
+            </h3>
+        </div>
+
+    </div>
+
+    <div id="GamePanel" class="GamePanel">
+        <div id="firstGame" class="firstGame">
+            <button id="btnPlay" class="btnPlay"></button>
+            <img src="resources/IconFlop.jpg" >
+            <h3 
+                style="text-align: center;
+                    color: aliceblue;">
+                Flopie Birdy
+            </h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
