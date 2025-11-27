@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiet Play</title>
-    <link rel="stylesheet" href="styleMenu.css">
-    <link rel="stylesheet" href="styleGamePanel.css">
-    <link rel="stylesheet" href="styleMoviePanel.css">
-    <link rel="stylesheet" href="styleStoryPanel.css">
+    <link rel="stylesheet" href="Menu.css">
+    <link rel="stylesheet" href="GamePanel.css">
+    <link rel="stylesheet" href="MoviePanel.css">
+    <link rel="stylesheet" href="StoryPanel.css">
 </head>
 <body>
     <div id="overlay" class="overlay"></div>
@@ -82,27 +82,27 @@
                     </select>
                     <br>
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;Font Size: </label> 
-                    <input type="number" id="fontSize" min="10" max="60" value="20" style="width: 40px; right: 10px;">
+                    <input type="number" id="fontSize" autocomplete="off" min="10" max="60" value="20" style="width: 40px; right: 10px;">
                     <br>
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;Font Color: </label> 
-                    <input type="color" id="fontColor" value="$ffffff" style="width: 40px; height: 20px;">
+                    <input type="color" id="fontColor" value="#ffffff" style="width: 40px; height: 20px;">
                     <hr style="height: 1px;">
                     <label>Sound Costumization</label>
                     <hr style="height: 1px;">
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;Balance Control: </label> 
-                    <input type="range" min="0" max="30">
+                    <input type="range" autocomplete="off" min="0" max="30">
                     <br>
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;Backround Noise: </label>
-                    <input type="range" min="0" max="30">
+                    <input type="range" autocomplete="off" min="0" max="30">
                     <br>
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;Speech Enhancement: </label>
-                    <input type="range" min="0" max="30"> 
+                    <input type="range" autocomplete="off" min="0" max="30"> 
                     <br>
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;High Frequency: </label> 
-                    <input type="range" min="0" max="30">
+                    <input type="range" min="0" max="30" autocomplete="off">
                     <br>
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;Low Frequency: </label> 
-                    <input type="range" min="0" max="30">
+                    <input type="range" min="0" max="30" autocomplete="off">
                     <br>
                 </div>
 
@@ -117,18 +117,40 @@
         <div id="firstStory" class="firstStory">
             <button id="btnRead" class="btnRead"></button>
             <img src="resources/iconBook.jpg" >
-            <h3 
-                style="text-align: center;
-                        color: aliceblue;">
+            <h3 style="text-align: center;color: aliceblue;">
                 Three Body Problem
             </h3>
         </div>
-
+        <div id="bookReader" class="bookReader" style="display: none;">
+            <h1>The Three Body Problem</h1>
+            <hr style="width:  850px ;height: 2px;background-color: rgba(0, 0, 0, 0.43);">
+            <p id="paragraph" class="paragraph">The Three-Body Problem (Chinese: 三体; lit. 'three body') is a 2008 novel by the Chinese hard science fiction author Liu Cixin. It is the first novel in the Remembrance of Earth's Past trilogy.[1] The series portrays a fictional past, present, and future wherein Earth encounters an alien civilization from a nearby system of three Sun-like stars orbiting one another, a representative example of the three-body problem in orbital mechanics.
+                The story was originally serialized in Science Fiction World in 2006 before it was published as a standalone book in 2008.[2] In 2006, it received the Galaxy Award for Chinese science fiction.[3] In 2012, it was described as one of China's most successful full-length novels of the past two decades.[4] The English translation by Ken Liu was published by Tor Books in 2014.[5] That translation was the first novel by an Asian writer to win a Hugo Award for Best Novel;[6][7] it was also nominated for the Nebula Award for Best Novel.[8] </p>
+                
+        </div>
+        <div id="controlPanelR" class="controlPanelR">
+            <label>Font Costumization</label>
+            <hr style="width:  275px ;height: 2px;background-color: rgba(0, 0, 0, 0.43);">
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;Font Style:</label>
+            <select id="fontStyleR">
+                <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                <option value="Arial Narrow">Arial Narrow</option>
+                <option value="Arial">Arial</option>
+                <option value="sans-serif">sans-serif</option>
+            </select>
+            <br>
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;Font Size: </label> 
+            <input type="number" id="fontSizeR" autocomplete="off" min="10" max="60" value="20" style="width: 40px; right: 10px;">
+            <br>
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;Font Color: </label> 
+            <input type="color" autocomplete="off" id="fontColorR" value="#ffffff" style="width: 40px; height: 20px;">
+            <hr style="height: 1px;">
+        </div>
     </div>
 
     <div id="GamePanel" class="GamePanel">
         <div id="firstGame" class="firstGame">
-            <button id="btnPlay" class="btnPlay"></button>
+            <button id="btnPlayG" class="btnPlayG"></button>
             <img src="resources/IconFlop.jpg" >
             <h3 
                 style="text-align: center;
@@ -136,8 +158,14 @@
                 Flopie Birdy
             </h3>
         </div>
+        <div id="gamePlay" class="gamePlay" style="display: none;">
+            <h1>Game is Work In Progress</h1>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="Menu.js"></script>
+    <script type="module" src="MoviePanel.js"></script>
+    <script type="module" src="StoryPanel.js"></script>
+    <script type="module" src="GamePanel.js"></script>
 </body>
 </html>

@@ -1,11 +1,11 @@
-.StoryPanel {
+.GamePanel { 
     outline: 2px solid black;
     width: 100vw;
     height: 100vh;
     display: none;
 }
-.firstStory{
-    position: absolute;
+.firstGame {
+   position: absolute;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -13,9 +13,17 @@
     
     margin: 10px;
     width: 200px;
-    height: 270px;
+    height: 270px; 
 }
-.firstStory .btnRead{
+.firstGame img{
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    z-index: 2;
+    width: 75%;           
+    height: 75%;
+    border: none;
+}
+.firstGame .btnPlayG {
     background-color: rgba(255, 255, 255, 0);
     position: absolute;
     z-index: 3;
@@ -27,21 +35,23 @@
     width: 75%;           
     height: 75%;
     border: none;
-}
-.firstStory img {
-    background-color: rgba(255, 255, 255, 0);
-    position: absolute;
-    z-index: 2;
-    width: 75%;           
-    height: 75%;
-    border: none;
-}
-.firstStory h3 {
+}   
+.firstGame h3 {
     color: aliceblue;
     position: absolute;
     z-index: 2;
     margin-top: 220px;
 }
-.firstStory .btnRead:hover{
+.firstGame .btnPlayG:hover{
     background-color: rgba(255, 255, 255, 0.119);
+}
+.GamePanel .gamePlay {
+    background-color: bisque;
+    border: 4px solid rgb(147, 147, 147);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10pc;
+    width: 50vw;
+    height: 50vh;
 }
